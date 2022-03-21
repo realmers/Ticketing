@@ -1,6 +1,6 @@
 # Ticketing app
 
-Bulding microservices Ticketing app with express.js, TypeScript, MongoDB, Redis, Next.js, Docker, Kubernetes, NATS, and Skaffold.
+Bulding microservices with the database per service pattern and the following technologies: express.js, TypeScript, MongoDB, Redis, Next.js, Docker, Kubernetes, NATS, and Skaffold.
 
 # Folder Detail
 
