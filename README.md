@@ -13,7 +13,7 @@ Bulding microservices Ticketing app with express.js, TypeScript, MongoDB, Redis,
 | nats-test    | Testing to NATS Streaming Server                                              |
 | orders       | Order service                                                                 |
 | tickets      | Ticket service                                                                |
-| skaffold.yml | Skaffold configuration for this project                                       |
+| skaffold.yaml | Skaffold configuration for this project                                      |
 
 #### Skaffold (local dev: Windows)
 
@@ -23,6 +23,8 @@ From root project directory: run `skaffold dev`
 
 ---
 ## CI/CD: Github Actions
+
+All CI/CD is handled via Github Actions
 
 # Creating a secret environment
 
