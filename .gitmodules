@@ -1,0 +1,3 @@
+[submodule "ticketing-common"]
+	path = ticketing-common
+	url = https://github.com/realmers/ticketing-common.git
