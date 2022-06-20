@@ -1,4 +1,4 @@
-# Ticketing app
+# Ticketing app (ON HOLD)
 
 Bulding microservices with the database per service pattern and the following technologies: express.js, TypeScript, MongoDB, Redis, Next.js, Docker, Kubernetes, NATS, Jest and Skaffold.
 
