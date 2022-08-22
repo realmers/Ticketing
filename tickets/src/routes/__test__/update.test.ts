@@ -6,7 +6,7 @@ it('returns a 404 if the provided id does not exist', async () => {
   const id = new mongoose.Types.ObjectId().toHexString();
   await request(app)
     .put(`/api/tickets/${id}`)
-    .set('Cookie', global.signin())
+    .set('Cookie', signin())
     .send({
       title: 'aslkdfj',
       price: 20,
@@ -28,7 +28,7 @@ it('returns a 401 if the user is not authenticated', async () => {
 it('returns a 401 if the user does not own the ticket', async () => {
   const response = await request(app)
     .post('/api/tickets')
-    .set('Cookie', global.signin())
+    .set('Cookie', signin())
     .send({
       title: 'asldkfj',
       price: 20,
@@ -36,7 +36,7 @@ it('returns a 401 if the user does not own the ticket', async () => {
 
   await request(app)
     .put(`/api/tickets/${response.body.id}`)
-    .set('Cookie', global.signin())
+    .set('Cookie', signin())
     .send({
       title: 'alskdjflskjdf',
       price: 1000,
@@ -45,7 +45,7 @@ it('returns a 401 if the user does not own the ticket', async () => {
 });
 
 it('returns a 400 if the user provides an invalid title or price', async () => {
-  const cookie = global.signin();
+  const cookie = signin();
 
   const response = await request(app)
     .post('/api/tickets')
@@ -75,7 +75,7 @@ it('returns a 400 if the user provides an invalid title or price', async () => {
 });
 
 it('updates the ticket provided valid inputs', async () => {
-  const cookie = global.signin();
+  const cookie = signin();
 
   const response = await request(app)
     .post('/api/tickets')
