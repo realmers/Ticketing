@@ -24,10 +24,10 @@ spec:
                 name: tickets-srv
                 port:
                   number: 3000
-          - path: /?(.*)
+          - path: /api/catalog/?(.*)
             pathType: Prefix
             backend:
               service:
-                name: client-srv
+                name: catalog-srv
                 port:
-                  number: 3000
+                  number: 3001

@@ -32,3 +32,11 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: realmers/catalog
+      context: catalog
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.cs"
+            dest: .
